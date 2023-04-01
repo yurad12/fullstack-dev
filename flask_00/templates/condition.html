@@ -7,11 +7,13 @@
     <title>Document</title>
 </head>
 <body>
-    <ul>
-        {% for index in range(fruits | length) %}
-        <!-- indentation 안해도 됨 -->
-        <li>{{ loop.index }} : {{ fruits[index]}}</li>
-        {% endfor %}
-    </ul>
+    {% if age > 30 %}
+    <h3>30보다 큽니다.</h3>
+    <!-- 왜 빨간색이 뜨는 거지? -->
+    {% elif age < 20 %}
+    <h3>20보다 작습니다.</h3>
+    {% else %}
+    <h3>{{ age }}</h3>
+    {% endif %}
 </body>
 </html>
