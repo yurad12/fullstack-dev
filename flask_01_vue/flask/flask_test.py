@@ -3,7 +3,7 @@ from flask_cors import CORS
 
 app = Flask(__name__)
 CORS(app)
-# http GET http://localhost:8082/test_vue
+# http GET http://localhost:8082/test_vue -> CORS 전/후 확인해보기
 
 @app.route('/test_vue', methods=['GET'])
 def test():
